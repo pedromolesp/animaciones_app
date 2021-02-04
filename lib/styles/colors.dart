@@ -13,3 +13,6 @@ Color feldgrau = Color(0xff475944);
 Color mirtleGreen = Color(0xff38726C);
 
 Color transparent = Colors.transparent;
+
+Color white = Colors.white;
+Color black = Colors.black;

@@ -10,7 +10,10 @@ class MyApp extends StatelessWidget {
       title: 'Animaciones app',
       debugShowCheckedModeBanner: false,
       initialRoute: 'hero',
-      routes: {'hero': (BuildContext context) => HeroAnimationPage()},
+      routes: {
+        'hero': (BuildContext context) => HeroAnimationPage(),
+        'detailhero': (BuildContext context) => DetailHeroAnimation(),
+      },
     );
   }
 }
