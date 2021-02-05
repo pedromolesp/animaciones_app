@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_567" data-name="Rectángulo 567" class="cls-1" width="26" height="26" transform="translate(42 40)"/>
+    </clipPath>
+  </defs>
+  <g id="Flecha_avanzar" data-name="Flecha avanzar" class="cls-2" transform="translate(-42 -40)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(40.086 38.135)">
+      <path id="Trazado_1949" data-name="Trazado 1949" class="cls-1" d="M20.443,8.363a.929.929,0,0,0,0,1.319l4.274,4.274H2.843a.929.929,0,0,0,0,1.858H24.7l-4.256,4.246a.926.926,0,0,0,1.31,1.31l5.91-5.91a.818.818,0,0,0,0-1.18l-5.9-5.919a.929.929,0,0,0-1.319,0Z"/>
+    </g>
+  </g>
+</svg>
