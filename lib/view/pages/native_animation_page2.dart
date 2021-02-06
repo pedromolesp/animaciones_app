@@ -1,15 +1,32 @@
 import 'package:animaciones_app/helpers/media_size.dart';
 import 'package:animaciones_app/styles/colors.dart';
+import 'package:animaciones_app/styles/fonts.dart';
+import 'package:animaciones_app/view/widgets/floating_action_button.dart';
 import 'package:flutter/material.dart';
 
-class HeroAnimationPage extends StatelessWidget {
+class NativeAnimationPage extends StatefulWidget {
+  @override
+  _NativeAnimationPageState createState() => _NativeAnimationPageState();
+}
+
+class _NativeAnimationPageState extends State<NativeAnimationPage> {
+  bool showHan = false;
+  @override
+  void initState() {
+    super.initState();
+    showHan = false;
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = getMediaSize(context);
+
     return Scaffold(
+      floatingActionButton:
+          getFloatingActionButtonNext(context, size, "tabbarview"),
       appBar: AppBar(
         backgroundColor: iris,
-        title: Text("Hero Animation"),
+        title: Text("Animaciones nativas"),
       ),
       backgroundColor: blueBell,
       body: Container(
@@ -31,7 +48,11 @@ class HeroAnimationPage extends StatelessWidget {
               "han",
               size,
               "https://i2.wp.com/wipy.tv/wp-content/uploads/2020/03/verdadera-apariencia-de-han-solo-en-star-wars.jpg?w=1000&ssl=1",
-              () {},
+              () {
+                setState(() {
+                  showHan = !showHan;
+                });
+              },
             ),
             getRoundedWidget(
               "thor",
@@ -49,34 +70,68 @@ class HeroAnimationPage extends StatelessWidget {
 
   Widget getRoundedWidget(
       String key, Size size, String imgUrl, Function openView) {
-    return Stack(
-      children: [
-        Container(
-          width: size.height * 0.25,
-          height: size.height * 0.25,
-          child: Hero(
-            tag: key,
-            child: ClipOval(
-              child: Image(
-                image: NetworkImage(imgUrl),
-                fit: BoxFit.fitHeight,
+    return Container(
+      width: size.width,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            width: size.height * 0.25,
+            height: size.height * 0.25,
+            child: Hero(
+              tag: key,
+              child: ClipOval(
+                child: Image(
+                  image: NetworkImage(imgUrl),
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
           ),
-        ),
-        ClipOval(
-          child: Material(
-            color: transparent,
-            child: InkWell(
-              onTap: openView,
-              child: Container(
-                width: size.height * 0.25,
-                height: size.height * 0.25,
+          ClipOval(
+            child: Material(
+              color: transparent,
+              child: InkWell(
+                onTap: openView,
+                child: Container(
+                  width: size.height * 0.25,
+                  height: size.height * 0.25,
+                ),
               ),
             ),
           ),
-        ),
-      ],
+          key == "han"
+              ? Positioned(
+                  right: 10,
+                  child: AnimatedOpacity(
+                    opacity: showHan ? 1.0 : 0.0,
+                    duration: Duration(seconds: 1),
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: white,
+                      ),
+                      width: size.width * 0.25,
+                      height: size.height * 0.15,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                            "Diesel: 0.865",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "Gasolina: 0.965",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ))
+              : Container()
+        ],
+      ),
     );
   }
 
@@ -100,8 +155,8 @@ class HeroAnimationPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Container(
-                  width: size.height * 0.06,
-                  height: size.height * 0.06,
+                  width: size.height * 0.1,
+                  height: size.height * 0.1,
                   child: Hero(
                     tag: "spiderman",
                     child: ClipOval(
@@ -123,6 +178,7 @@ class HeroAnimationPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: size.width * 0.07,
                     color: black,
+                    fontFamily: Fonts.muliBold,
                     decoration: TextDecoration.none,
                   ),
                 ),
@@ -218,9 +274,12 @@ class DetailHeroAnimation extends StatelessWidget {
                 height: size.height * 0.05,
               ),
               Text(
-                "Thor reposta en Petroprix",
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                "Thor ha asegurado su caballo con HelloAuto, el seguro inteligente.\n\nSé inteligente, sé como thor.",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
               )
             ],
           ),

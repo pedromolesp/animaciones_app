@@ -1,5 +1,6 @@
-import 'package:animaciones_app/pages/hero_animation_page2.dart';
-import 'package:animaciones_app/pages/presentacion1.dart';
+import 'package:animaciones_app/view/pages/native_animation_page2.dart';
+import 'package:animaciones_app/view/pages/presentacion1.dart';
+import 'package:animaciones_app/view/pages/tabbar_view.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -12,9 +13,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'presentacion',
       routes: {
-        'hero': (BuildContext context) => HeroAnimationPage(),
+        'hero': (BuildContext context) => NativeAnimationPage(),
         'detailhero': (BuildContext context) => DetailHeroAnimation(),
         'presentacion': (BuildContext context) => Presentacion(),
+        'tabbarview': (BuildContext context) => TabbarViewPage()
       },
     );
   }

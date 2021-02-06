@@ -1,6 +1,7 @@
 import 'package:animaciones_app/helpers/media_size.dart';
-import 'package:animaciones_app/pages/widgets/floating_action_button.dart';
 import 'package:animaciones_app/styles/colors.dart';
+import 'package:animaciones_app/styles/fonts.dart';
+import 'package:animaciones_app/view/widgets/floating_action_button.dart';
 import 'package:flutter/material.dart';
 
 class Presentacion extends StatelessWidget {
@@ -40,7 +41,7 @@ class Presentacion extends StatelessWidget {
                       maxLines: 2,
                       style: TextStyle(
                         color: white,
-                        fontWeight: FontWeight.bold,
+                        fontFamily: Fonts.muliBlack,
                         fontSize: 30,
                       ),
                     ),
@@ -52,7 +53,7 @@ class Presentacion extends StatelessWidget {
                       maxLines: 2,
                       style: TextStyle(
                         color: white,
-                        fontWeight: FontWeight.bold,
+                        fontFamily: Fonts.muliRegular,
                         fontSize: 20,
                       ),
                     )
@@ -77,7 +78,7 @@ class Presentacion extends StatelessWidget {
               "Estudiante del IES VIRGEN DEL CARMEN, matrícula de honor del curso 1980/1981.",
               style: TextStyle(
                 color: white,
-                fontWeight: FontWeight.bold,
+                fontFamily: Fonts.muliItalic,
                 fontSize: 25,
               ),
             ),
