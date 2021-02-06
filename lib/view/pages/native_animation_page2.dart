@@ -26,7 +26,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
           getFloatingActionButtonNext(context, size, "tabbarview"),
       appBar: AppBar(
         backgroundColor: iris,
-        title: Text("Animaciones nativas"),
+        title: Text("2. Animaciones nativas"),
       ),
       backgroundColor: blueBell,
       body: Container(

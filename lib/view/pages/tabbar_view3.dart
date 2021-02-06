@@ -84,7 +84,7 @@ class _TabbarViewPageState extends State<TabbarViewPage>
         ),
         appBar: AppBar(
           backgroundColor: yelloOrange,
-          title: Text("Tab (navigationBar)"),
+          title: Text("3. Tab (navigationBar)"),
         ),
         body: TabBarView(
           controller: _tabController,

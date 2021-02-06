@@ -1,6 +1,6 @@
 import 'package:animaciones_app/view/pages/native_animation_page2.dart';
 import 'package:animaciones_app/view/pages/presentacion1.dart';
-import 'package:animaciones_app/view/pages/tabbar_view.dart';
+import 'package:animaciones_app/view/pages/tabbar_view3.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
