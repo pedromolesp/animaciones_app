@@ -1,6 +1,7 @@
 import 'package:animaciones_app/helpers/media_size.dart';
 import 'package:animaciones_app/styles/colors.dart';
 import 'package:animaciones_app/styles/fonts.dart';
+import 'package:animaciones_app/view/widgets/floating_action_button.dart';
 import 'package:flutter/material.dart';
 
 class TabbarViewPage extends StatefulWidget {
@@ -38,6 +39,8 @@ class _TabbarViewPageState extends State<TabbarViewPage>
     return Theme(
       data: ThemeData(accentColor: yelloOrange, primaryColor: yelloOrange),
       child: Scaffold(
+        floatingActionButton:
+            getFloatingActionButtonNext(context, size, "sliver"),
         backgroundColor: orangeYellowGrayola,
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
