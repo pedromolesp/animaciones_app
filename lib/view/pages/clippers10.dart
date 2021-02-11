@@ -101,7 +101,7 @@ class _ClippersViewState extends State<ClippersView> {
                 color: blue5),
           ),
           Positioned(
-            top: size.height * 0.28,
+            top: size.height * 0.26,
             child: Image.asset(
               "assets/images/barco.gif",
               width: size.width,
