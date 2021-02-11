@@ -1,5 +1,6 @@
 import 'package:animaciones_app/helpers/media_size.dart';
 import 'package:animaciones_app/styles/colors.dart';
+import 'package:animaciones_app/view/widgets/floating_action_button.dart';
 import 'package:flutter/material.dart';
 import 'package:compasstools/compasstools.dart';
 
@@ -63,6 +64,8 @@ class _CompassAnimationState extends State<CompassAnimation> {
   Widget build(BuildContext context) {
     Size size = getMediaSize(context);
     return Scaffold(
+      floatingActionButton:
+          getFloatingActionButtonNext(context, size, 'clippers'),
       appBar: AppBar(
         backgroundColor: dutchwhite,
         title: const Text('9. Brújula'),

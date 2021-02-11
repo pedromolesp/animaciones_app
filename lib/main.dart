@@ -1,6 +1,7 @@
 import 'package:animaciones_app/styles/colors.dart';
 import 'package:animaciones_app/view/pages/animated_widgets_native6.dart';
 import 'package:animaciones_app/view/pages/charts7.dart';
+import 'package:animaciones_app/view/pages/clippers10.dart';
 import 'package:animaciones_app/view/pages/compass9.dart';
 import 'package:animaciones_app/view/pages/loading_page.dart';
 import 'package:animaciones_app/view/pages/lottie_animation5.dart';
@@ -40,6 +41,7 @@ class MyApp extends StatelessWidget {
         'charts': (BuildContext context) => ChartView(),
         'sensors': (BuildContext context) => SensorsAnimated(),
         'compass': (BuildContext context) => CompassAnimation(),
+        'clippers': (BuildContext context) => ClippersView(),
       },
     );
   }
