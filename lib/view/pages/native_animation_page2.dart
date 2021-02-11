@@ -41,7 +41,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
             getRoundedWidget(
               "spiderman",
               size,
-              "https://cronicaglobal.elespanol.com/uploads/s1/61/11/50/7/main-700b9bff30.jpeg",
+              "assets/images/spiderman.jpeg",
               () {
                 getAlert(size, context);
               },
@@ -49,7 +49,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
             getRoundedWidget(
               "han",
               size,
-              "https://i2.wp.com/wipy.tv/wp-content/uploads/2020/03/verdadera-apariencia-de-han-solo-en-star-wars.jpg?w=1000&ssl=1",
+              "assets/images/solo.jpeg",
               () {
                 setState(() {
                   showHan = !showHan;
@@ -59,7 +59,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
             getRoundedWidget(
               "thor",
               size,
-              "https://indiehoy.com/wp-content/uploads/2020/05/thor.jpg",
+              "assets/images/thor.jpg",
               () {
                 Navigator.pushNamed(context, "detailhero");
               },
@@ -84,7 +84,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
               tag: key,
               child: ClipOval(
                 child: Image(
-                  image: NetworkImage(imgUrl),
+                  image: AssetImage(imgUrl),
                   fit: BoxFit.fitHeight,
                 ),
               ),
