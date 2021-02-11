@@ -2,7 +2,9 @@ import 'dart:math';
 
 import 'package:animaciones_app/helpers/media_size.dart';
 import 'package:animaciones_app/styles/colors.dart';
+import 'package:animaciones_app/styles/fonts.dart';
 import 'package:animaciones_app/view/widgets/floating_action_button.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedWidgetNatives extends StatefulWidget {
@@ -21,8 +23,8 @@ class _AnimatedWidgetNativesState extends State<AnimatedWidgetNatives> {
     Size size = getMediaSize(context);
     height1 = Random().nextDouble() * 200;
     width1 = Random().nextDouble() * 200;
-    height2 = Random().nextDouble() * size.height;
-    width2 = Random().nextDouble() * size.width;
+    height2 = Random().nextDouble() * size.height * 0.9;
+    width2 = Random().nextDouble() * size.width * 0.9;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: feldgrau,
@@ -40,6 +42,16 @@ class _AnimatedWidgetNativesState extends State<AnimatedWidgetNatives> {
                 duration: Duration(milliseconds: 500),
                 width: width1,
                 height: height1,
+                child: AutoSizeText(
+                  "AutoSizedText en AnimatedContainer",
+                  maxLines: 2,
+                  minFontSize: 8,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      fontSize: 30,
+                      fontFamily: Fonts.muliBold,
+                      color: color ? white : black),
+                ),
                 color: color ? Colors.blue : Colors.amber,
               ),
             ),
@@ -53,7 +65,7 @@ class _AnimatedWidgetNativesState extends State<AnimatedWidgetNatives> {
                     shape: BoxShape.circle,
                     color: color ? Colors.amber : Colors.blue,
                   ),
-                  child: getFloatingActionButtonNext(context, size, ''),
+                  child: getFloatingActionButtonNext(context, size, 'charts'),
                 ),
                 duration: Duration(milliseconds: 500)),
             Positioned(

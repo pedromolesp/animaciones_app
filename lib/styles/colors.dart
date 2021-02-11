@@ -14,5 +14,11 @@ Color mirtleGreen = Color(0xff38726C);
 
 Color transparent = Colors.transparent;
 
+Color independence = Color(0xff3A405A);
+Color yonder = Color(0xff99B2DD);
+
+Color greencambrige = Color(0xffB3CBB9);
+Color dutchwhite = Color(0xffDDD8B8);
+
 Color white = Colors.white;
 Color black = Colors.black;

@@ -21,6 +21,12 @@ class _LottieAnimationState extends State<LottieAnimation>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     Size size = getMediaSize(context);
     return Scaffold(

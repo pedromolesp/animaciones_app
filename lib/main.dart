@@ -1,9 +1,12 @@
 import 'package:animaciones_app/styles/colors.dart';
 import 'package:animaciones_app/view/pages/animated_widgets_native6.dart';
+import 'package:animaciones_app/view/pages/charts7.dart';
+import 'package:animaciones_app/view/pages/compass9.dart';
 import 'package:animaciones_app/view/pages/loading_page.dart';
 import 'package:animaciones_app/view/pages/lottie_animation5.dart';
 import 'package:animaciones_app/view/pages/native_animation_page2.dart';
 import 'package:animaciones_app/view/pages/presentacion1.dart';
+import 'package:animaciones_app/view/pages/sensors8.dart';
 import 'package:animaciones_app/view/pages/sliverappbar4.dart';
 import 'package:animaciones_app/view/pages/tabbar_view3.dart';
 import 'package:flutter/material.dart';
@@ -34,6 +37,9 @@ class MyApp extends StatelessWidget {
         'tabbarview': (BuildContext context) => TabbarViewPage(),
         'lottie': (BuildContext context) => LottieAnimation(),
         'animated': (BuildContext context) => AnimatedWidgetNatives(),
+        'charts': (BuildContext context) => ChartView(),
+        'sensors': (BuildContext context) => SensorsAnimated(),
+        'compass': (BuildContext context) => CompassAnimation(),
       },
     );
   }
