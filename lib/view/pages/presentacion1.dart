@@ -10,7 +10,8 @@ class Presentacion extends StatelessWidget {
     Size size = getMediaSize(context);
     return Scaffold(
       backgroundColor: iris,
-      floatingActionButton: getFloatingActionButtonNext(context, size, "hero"),
+      floatingActionButton:
+          getFloatingActionButtonNext(context, size, "hero", color: black),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
         child: Column(

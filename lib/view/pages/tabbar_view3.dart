@@ -39,8 +39,9 @@ class _TabbarViewPageState extends State<TabbarViewPage>
     return Theme(
       data: ThemeData(accentColor: yelloOrange, primaryColor: yelloOrange),
       child: Scaffold(
-        floatingActionButton:
-            getFloatingActionButtonNext(context, size, "sliver"),
+        floatingActionButton: getFloatingActionButtonNext(
+            context, size, "sliver",
+            color: yelloOrange),
         backgroundColor: orangeYellowGrayola,
         bottomNavigationBar: Container(
           decoration: BoxDecoration(

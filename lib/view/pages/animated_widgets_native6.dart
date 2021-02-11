@@ -65,7 +65,8 @@ class _AnimatedWidgetNativesState extends State<AnimatedWidgetNatives> {
                     shape: BoxShape.circle,
                     color: color ? Colors.amber : Colors.blue,
                   ),
-                  child: getFloatingActionButtonNext(context, size, 'charts'),
+                  child: getFloatingActionButtonNext(context, size, 'charts',
+                      color: feldgrau),
                 ),
                 duration: Duration(milliseconds: 500)),
             Positioned(

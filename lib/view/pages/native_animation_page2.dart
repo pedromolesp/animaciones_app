@@ -23,10 +23,12 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
 
     return Scaffold(
       floatingActionButton:
-          getFloatingActionButtonNext(context, size, "tabbarview"),
+          getFloatingActionButtonNext(context, size, "tabbarview", color: iris),
       appBar: AppBar(
         backgroundColor: iris,
-        title: Text("2. Animaciones nativas"),
+        title: Text(
+          "2. Animaciones nativas",
+        ),
       ),
       backgroundColor: blueBell,
       body: Container(

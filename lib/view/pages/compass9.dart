@@ -64,8 +64,9 @@ class _CompassAnimationState extends State<CompassAnimation> {
   Widget build(BuildContext context) {
     Size size = getMediaSize(context);
     return Scaffold(
-      floatingActionButton:
-          getFloatingActionButtonNext(context, size, 'clippers'),
+      floatingActionButton: getFloatingActionButtonNext(
+          context, size, 'clippers',
+          color: dutchwhite),
       appBar: AppBar(
         backgroundColor: dutchwhite,
         title: const Text('9. Brújula'),

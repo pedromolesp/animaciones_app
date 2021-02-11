@@ -39,13 +39,15 @@ class _ClippersViewState extends State<ClippersView> {
               height: size.height * 0.55,
             ),
           ),
-          Image.asset(
-            "assets/images/stars.png",
-            color: Colors.yellow,
-            width: size.width,
-            height: size.height,
-            fit: BoxFit.fitHeight,
-          ),
+          !dianoche
+              ? Image.asset(
+                  "assets/images/stars.png",
+                  color: Colors.yellow,
+                  width: size.width,
+                  height: size.height,
+                  fit: BoxFit.fitHeight,
+                )
+              : SizedBox(),
           Positioned(
             top: size.height * 0.1,
             left: size.width * 0.2,
@@ -62,7 +64,7 @@ class _ClippersViewState extends State<ClippersView> {
                   ),
                   Icon(
                     Icons.arrow_back,
-                    color: black,
+                    color: blue6,
                   )
                 ],
               ),

@@ -64,7 +64,8 @@ class _LottieAnimationState extends State<LottieAnimation>
               width: size.width,
               bottom: 0,
               child: Center(
-                child: getFloatingActionButtonNext(context, size, "animated"),
+                child: getFloatingActionButtonNext(context, size, "animated",
+                    color: scarlet),
               ),
             )
           ],

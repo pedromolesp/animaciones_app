@@ -93,7 +93,8 @@ class _SliverBarViewState extends State<SliverBarView> {
                         ),
                         opacity: extended ? 1.0 : 0.0,
                         child: getFloatingActionButtonNext(
-                            context, size, "lottie")),
+                            context, size, "lottie",
+                            color: Colors.cyan.withOpacity(0.4))),
                   )
                 ],
               ),

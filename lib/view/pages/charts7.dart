@@ -10,8 +10,9 @@ class ChartView extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = getMediaSize(context);
     return Scaffold(
-      floatingActionButton:
-          getFloatingActionButtonNext(context, size, 'sensors'),
+      floatingActionButton: getFloatingActionButtonNext(
+          context, size, 'sensors',
+          color: independence),
       backgroundColor: yonder,
       appBar: AppBar(
         backgroundColor: independence,
