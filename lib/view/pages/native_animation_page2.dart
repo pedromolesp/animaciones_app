@@ -163,8 +163,7 @@ class _NativeAnimationPageState extends State<NativeAnimationPage> {
                     tag: "spiderman",
                     child: ClipOval(
                       child: Image(
-                        image: NetworkImage(
-                            "https://cronicaglobal.elespanol.com/uploads/s1/61/11/50/7/main-700b9bff30.jpeg"),
+                        image: AssetImage("assets/images/spiderman.jpeg"),
                         fit: BoxFit.fitHeight,
                       ),
                     ),
@@ -265,8 +264,7 @@ class DetailHeroAnimation extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(40),
                     child: Image(
-                      image: NetworkImage(
-                          "https://indiehoy.com/wp-content/uploads/2020/05/thor.jpg"),
+                      image: AssetImage("assets/images/thor.jpg"),
                       fit: BoxFit.fitHeight,
                     ),
                   ),
